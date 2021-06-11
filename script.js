@@ -7,9 +7,9 @@ function start() {
 
   document.querySelectorAll(".pin").forEach((pin) => {
     pin.addEventListener("click", clickOpenPopUp);
-    pin.addEventListener("mouseover", openPopUp);
+    // pin.addEventListener("mouseover", openPopUp);
 
-    pin.addEventListener("mouseleave", closePopUp);
+    // pin.addEventListener("mouseleave", closePopUp);
   });
 
   document.querySelector(".close").addEventListener("click", closePopUp);
@@ -42,8 +42,8 @@ function clickOpenPopUp(event) {
   document.querySelector(".popup .info").textContent = this.dataset.info;
   document.querySelector(".popup .title").textContent = this.dataset.title;
 
-  const x = event.pageX - 10;
-  const y = event.pageY - 10;
+  const x = event.pageX;
+  const y = event.pageY - 150;
 
   popup.style.left = x + "px";
   popup.style.top = y + "px";
